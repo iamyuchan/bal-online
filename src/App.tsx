@@ -133,7 +133,7 @@ export function App() {
           </div>
 
           <footer className="footer">
-              <p>&copy; 1994-{new Date().getFullYear()} 좌호빈. All Rights Reserved.</p>
+              <p>&copy; 1994-{new Date().getFullYear()} 좌호빈. All Rights Reserved. (jwapa@abcpizza.rest)</p>
           </footer>
       </div>
   );
