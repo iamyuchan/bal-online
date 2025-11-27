@@ -7,6 +7,7 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 import { App } from "./App";
 import ReactGA from "react-ga";
 
@@ -17,7 +18,9 @@ ReactGA.pageview(window.location.pathname);
 const elem = document.getElementById("root")!;
 const app = (
   <StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </StrictMode>
 );
 

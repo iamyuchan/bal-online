@@ -223,3 +223,26 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, #fff 0%, #c0c0c0 100%);
+  border-top: 3px outset #dfdfdf;
+  box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #808080;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer p {
+  color: #000;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+:fullscreen .footer {
+  display: none;
+}

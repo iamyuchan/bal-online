@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
+import { Helmet } from "react-helmet-async";
 import './App.css';
 import Tracker from '@openreplay/tracker';
 
@@ -70,6 +71,25 @@ export function App() {
 
   return (
       <div className="app">
+          <Helmet>
+              <title>The Foot - Online Game</title>
+              <meta name="description" content="좌호빈발게임" />
+
+              <meta property="og:type" content="website" />
+              <meta property="og:title" content="발.online" />
+              <meta property="og:description" content="좌호빈발게임" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:site_name" content="The Foot" />
+              <meta property="og:image" content="https://bal-online-unity-build.host-r2.abcpizza.rest/foot.jpeg" />
+              <meta property="og:image:width" content="1200" />
+              <meta property="og:image:height" content="630" />
+
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:title" content="발.online" />
+              <meta name="twitter:description" content="좌호빈발게임" />
+              <meta name="twitter:image" content="https://bal-online-unity-build.host-r2.abcpizza.rest/foot.jpeg" />
+          </Helmet>
+
           {!isLoaded && (
               <div className="loading-overlay">
                   <div className="loading-container">
@@ -111,6 +131,10 @@ export function App() {
                   }}
               />
           </div>
+
+          <footer className="footer">
+              <p>&copy; 1994-{new Date().getFullYear()} 좌호빈. All Rights Reserved.</p>
+          </footer>
       </div>
   );
 }
